@@ -22,11 +22,11 @@ const Modal = ({setModal, modal}) => {
 
     const getData= async () => {
         if(window.location.pathname === '/personagens'){
-            url = `http://gateway.marvel.com/v1/public/characters/${modal}?ts=${time}&apikey=${public_key}&hash=${hash}`;
+            url = `https://gateway.marvel.com/v1/public/characters/${modal}?ts=${time}&apikey=${public_key}&hash=${hash}`;
         }else if(window.location.pathname === '/filmes'){
-            url = `http://gateway.marvel.com/v1/public/series/${modal}?ts=${time}&apikey=${public_key}&hash=${hash}`;
+            url = `https://gateway.marvel.com/v1/public/series/${modal}?ts=${time}&apikey=${public_key}&hash=${hash}`;
         }else{
-            url = `http://gateway.marvel.com/v1/public/comics/${modal}?ts=${time}&apikey=${public_key}&hash=${hash}`;
+            url = `https://gateway.marvel.com/v1/public/comics/${modal}?ts=${time}&apikey=${public_key}&hash=${hash}`;
         }
         let response = await fetch(url);
         let body = await response.json();

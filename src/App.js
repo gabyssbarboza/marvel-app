@@ -23,20 +23,20 @@ function App() {
 
 
     const getCharaters = async () => {
-        const response = await fetch(`http://gateway.marvel.com/v1/public/characters?ts=${time}&apikey=${public_key}&hash=${hash}&limit=9`);
+        const response = await fetch(`https://gateway.marvel.com/v1/public/characters?ts=${time}&apikey=${public_key}&hash=${hash}&limit=9`);
         const body = await response.json();
         setCharacters(body.data.results)
         console.log('chars', body)
     }
 
     const getHqs = async () => {
-        const response = await fetch(`http://gateway.marvel.com/v1/public/comics?ts=${time}&apikey=${public_key}&hash=${hash}&limit=9`);
+        const response = await fetch(`https://gateway.marvel.com/v1/public/comics?ts=${time}&apikey=${public_key}&hash=${hash}&limit=9`);
         const body = await response.json();
         setHqs(body.data.results)
         console.log('hqs', body)
     }
     const getMovies = async () => {
-        const response = await fetch(`http://gateway.marvel.com/v1/public/series?ts=${time}&apikey=${public_key}&hash=${hash}&startYear=2018`);
+        const response = await fetch(`https://gateway.marvel.com/v1/public/series?ts=${time}&apikey=${public_key}&hash=${hash}&startYear=2018`);
         const body = await response.json();
         setMovies(body.data.results)
         console.log('movies', body)
@@ -57,8 +57,8 @@ function App() {
     return (
 
         <BrowserRouter>
-            <Route render={(props) => (props.location.pathname !== "/" && props.location.pathname !== "/login" ) && <Header />} />
-            <Route path="/login" exact component={() => <Login title="Bem-vindo(a) de volta!" subtitle="Acesse sua conta:" button="Entrar" />} />
+            <Route render={(props) => (props.location.pathname !== "/" && props.location.pathname !== "/marvel-app/login" ) && <Header />} />
+            <Route path="/marvel-app/login" exact component={() => <Login title="Bem-vindo(a) de volta!" subtitle="Acesse sua conta:" button="Entrar" />} />
             <Route path="/personagens" component={() => <Slide slides={characters} />} />
             <Route path="/hq" component={() => <Slide slides={hqs} />} />
             <Route path="/filmes" component={() => <Slide slides={movies} />} />
