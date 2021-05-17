@@ -3,13 +3,26 @@ import logo from '../../assets/images/logoMarvel.png';
 import logoMobile from '../../assets/images/logo-mobile.png';
 import profile from '../../assets/images/profile-picture.png';
 import {HeaderContainer, HeaderLink, HeaderList, HeaderListItem, HeaderLogo,  HeaderNav, HeaderUser, MenuBars, HeaderLogoMobile} from './HeaderStyles';
+import Dropdown from '../Dropdown';
 
 
 const Header  = () => {
+
+
+    
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  }
+
+
     return (
+        <>
+        <Dropdown toggle={toggle} isOpen={isOpen} />
         <HeaderContainer>
             <HeaderLogoMobile src={logoMobile} />
-            <MenuBars />
+            <MenuBars onClick={toggle}/>
             <HeaderNav >
                 <HeaderLogo src={logo} />
                 <HeaderList>
@@ -29,6 +42,7 @@ const Header  = () => {
                 </HeaderList>
             </HeaderNav>
         </HeaderContainer>
+        </>
     )
 }
 

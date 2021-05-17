@@ -23,6 +23,8 @@ export const HeaderNav = styled.nav`
 
 export const HeaderLogo = styled.img`
  display: block;
+ width: 144px;
+ margin-left: 1rem;
   @media screen and (max-width: 768px){
       display: none;
     }

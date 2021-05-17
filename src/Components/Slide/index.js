@@ -10,11 +10,23 @@ const Slide = ({slides}) => {
 
 
     const [modal, setModal] = React.useState(null);
-    
     const [size, setSize] = useState(true);
 
+    function slidesSize (){
+      if(window.innerWidth < 1180){
+        setSize(false)
+      }else{
+        setSize(true)
+      }
+    }
+
+    window.addEventListener('resize', slidesSize);
+
+
+
     const settings = {
-        dots: true,
+        dots: false,
+        arrows: size ?  true : false ,
         infinite: false,
         speed: 3000,
         slidesToShow: size ?  3 : 1,

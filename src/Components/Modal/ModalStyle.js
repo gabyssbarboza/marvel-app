@@ -15,22 +15,41 @@ export const ModalContainer = styled.div`
       transition: 0.8s ease-in-out;
       opacity:  ${({ setModal }) => (setModal ? '1' : '0')};
 
+      
+
 `;
 
 
 export const ModalContent = styled.div`
-  background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(64,14,14,1) 89%);
-  padding: 20px;
-  border-radius: 30px;
-  height: 70%;
-  width: 55%; 
-  display: flex;
+              background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(64,14,14,1) 89%);
+              padding: 20px;
+              border-radius: 30px;
+              height: 70%;
+              width: 55%; 
+              display: flex;
+
+       @media (max-width: 996px) {
+              flex-direction: column;
+              width: 95%; 
+              height: auto;
+              margin: 0 auto;
+              overflow: auto;
+              }
 
 
 `;
 
 
-export const ModalImg = styled.img``;
+export const ModalImg = styled.img`
+        @media (max-width: 996px) {
+              margin: 0 auto;
+              width: 50%; 
+       }
+
+`;
+
+
+
 export const ModalInfos = styled.div`
        padding: 2rem;
 
