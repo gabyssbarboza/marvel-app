@@ -1,0 +1,74 @@
+@font-face {
+    font-family: AxiformaBold;
+    src: url('../fonts/AxiformaBold.otf');
+  }
+  
+  @font-face {
+    font-family: AxiformaLigth;
+    src: url('../fonts/AxiformaLight.otf');
+  }
+  
+  @font-face {
+    font-family: AxiformaMedium;
+    src: url('../fonts/AxiformaMedium.otf');
+  }
+  
+  @media (max-width: 1080px) {
+    html {
+      font-size: 93.75%; 
+    }
+  }
+  
+  @media (max-width: 720px) {
+    html {
+      font-size: 87.5%; 
+    }
+  }
+  
+  
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  
+    
+  body {
+      background-color: #000000;
+      background-image: url('../images/bg-background.png');
+      background-repeat: no-repeat;
+  
+      
+      @media (max-width: 720px) {
+          background-image: none;
+      }
+  }
+  
+  
+  body, input, textarea, button {
+      /* font: 500 1rem "Axiforma Thin", sans-serif; */
+  }
+  
+  h1, h2, h3, h4, h5, h6{
+      font-weight: 500;
+      /* font-family: "Axiforma Bold", sans-serif; */
+  }
+  
+  h1{
+      font-size: 2rem;
+  }
+  
+  h2 {
+      font-size: 1.5rem;
+  }
+  
+  button {
+      cursor: pointer;
+  }
+  
+  
+.slick-slider.slick-initialized{
+  width: 90%;
+  margin: 0 auto;
+}
