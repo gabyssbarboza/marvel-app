@@ -47,7 +47,7 @@ const Modal = ({setModal, modal}) => {
                   <ModalImg src={item.thumbnail.path && item.thumbnail.path + '/portrait_uncanny.' + item.thumbnail.extension} />
                   <ModalInfos>
                       <ModalTitle>
-                            {item.title}
+                            {item.title || item.name}
                       </ModalTitle>
                       <ModalDescription>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ullam fugiat ratione consequuntur laboriosam, tempora error beatae dolores mollitia, eveniet modi voluptates at odio quasi, blanditiis praesentium asperiores nostrum similique.

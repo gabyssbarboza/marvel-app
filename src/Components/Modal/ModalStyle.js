@@ -15,8 +15,6 @@ export const ModalContainer = styled.div`
       transition: 0.8s ease-in-out;
       opacity:  ${({ setModal }) => (setModal ? '1' : '0')};
 
-      
-
 `;
 
 
@@ -30,7 +28,8 @@ export const ModalContent = styled.div`
 
        @media (max-width: 996px) {
               flex-direction: column;
-              width: 95%; 
+              width: 85%; 
+              max-height: 92%;
               height: auto;
               margin: 0 auto;
               overflow: auto;
@@ -43,7 +42,7 @@ export const ModalContent = styled.div`
 export const ModalImg = styled.img`
         @media (max-width: 996px) {
               margin: 0 auto;
-              width: 50%; 
+              width: 40%; 
        }
 
 `;
