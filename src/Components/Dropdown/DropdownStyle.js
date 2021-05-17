@@ -10,12 +10,16 @@ export const DropdownContainer = styled.div`
       width: 100%;
       height: 100%;
       background:  #000;
-      display: grid;
+      display: none;
       align-items: center;
       top:  ${({ isOpen }) => (isOpen ? '0' : '-100%')};
       left: 0;
-      transition: 0.3s ease-in-out;
+      transition: all  0.3s ease-in-out;
       opacity:  ${({ isOpen }) => (isOpen ? '1' : '0')};
+
+    @media screen and (max-width: 1180px){
+        display: grid;
+    }
 `
 
 

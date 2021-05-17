@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import logo from '../../assets/images/logoMarvel.png';
 import logoMobile from '../../assets/images/logo-mobile.png';
 import profile from '../../assets/images/profile-picture.png';
@@ -15,6 +15,13 @@ const Header  = () => {
   const toggle = () => {
     setIsOpen(!isOpen);
   }
+
+  function handleLogout (){
+    const item = window.localStorage.getItem('isUserLogged');
+    if(item){
+        localStorage.removeItem('isUserLogged');   
+     }        
+}
 
 
     return (
@@ -37,7 +44,7 @@ const Header  = () => {
                     </HeaderListItem>
                     <HeaderListItem>
                         <HeaderUser src={profile} />       
-                        <HeaderLink to="/login">Sair</HeaderLink>
+                        <HeaderLink onClick={handleLogout} to="/login">Sair</HeaderLink>
                     </HeaderListItem>
                 </HeaderList>
             </HeaderNav>

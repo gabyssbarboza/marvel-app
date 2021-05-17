@@ -1,6 +1,6 @@
 import md5 from 'md5';
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Route} from 'react-router-dom';
 import './assets/styles/globalStyle.css';
 import Header from './Components/Header';
 import Login from './Components/Login';
@@ -42,23 +42,21 @@ function App() {
         console.log('movies', body)
     }
 
+
+
     useEffect(() => {
         getCharaters();
-    }, []);
-
-    useEffect(() => {
         getHqs();
-    }, []);
-
-    useEffect(() => {
         getMovies();
     }, []);
+
+
 
     return (
 
         <BrowserRouter>
-            <Route render={(props) => (props.location.pathname !== "/" && props.location.pathname !== "/marvel-app/login" ) && <Header />} />
-            <Route path="/marvel-app/login" exact component={() => <Login title="Bem-vindo(a) de volta!" subtitle="Acesse sua conta:" button="Entrar" />} />
+            <Route render={(props) => (props.location.pathname !== "/" && props.location.pathname !== "/login" ) && <Header />} />
+            <Route path="/login" exact component={() => <Login title="Bem-vindo(a) de volta!" subtitle="Acesse sua conta:" button="Entrar" />} />
             <Route path="/personagens" component={() => <Slide slides={characters} />} />
             <Route path="/hq" component={() => <Slide slides={hqs} />} />
             <Route path="/filmes" component={() => <Slide slides={movies} />} />

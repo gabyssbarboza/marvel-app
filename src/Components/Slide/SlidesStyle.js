@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react'
-import styled, { css } from 'styled-components/macro';
+
+import styled from 'styled-components/macro';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
 

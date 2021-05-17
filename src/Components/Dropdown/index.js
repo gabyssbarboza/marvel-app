@@ -1,10 +1,9 @@
 import React from 'react';
-import profile from '../../assets/images/profile-picture.png';
-import {DropdownContainer, Icon, CloseIcon, DropdownLink, DropdownMenu, DropdownUser, DropdownWrapper} from './DropdownStyle';
+import {DropdownContainer, Icon, CloseIcon, DropdownLink, DropdownMenu, DropdownWrapper} from './DropdownStyle';
 
 const Dropdown = ({ isOpen, toggle }) => {
     return (
-      <DropdownContainer isOpen={isOpen} onClick={toggle}>
+      <DropdownContainer isOpen={isOpen}>
         <Icon onClick={toggle}>
           <CloseIcon />
         </Icon>

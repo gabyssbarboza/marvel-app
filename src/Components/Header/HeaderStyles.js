@@ -3,6 +3,12 @@ import styled from 'styled-components';
 import {FaBars} from 'react-icons/fa';
 
 export const HeaderContainer = styled.header`
+ @media screen and (max-width: 1180px){
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    }
+  
 `;
 
 export const HeaderNav = styled.nav`
@@ -15,7 +21,7 @@ export const HeaderNav = styled.nav`
        background: #000;
        box-shadow: 0px 3px 6px rgba(255, 0, 0, 0.53);
 
-       @media screen and (max-width: 768px){
+       @media screen and (max-width: 1180px){
       display: none;
     }
         
@@ -25,7 +31,7 @@ export const HeaderLogo = styled.img`
  display: block;
  width: 144px;
  margin-left: 1rem;
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 1180px){
       display: none;
     }
 `;
@@ -64,7 +70,7 @@ export const HeaderUser = styled.img``;
 
 export const HeaderLogoMobile = styled.img`
         display: none;
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 1180px){
       display: block;
     }
 
@@ -72,15 +78,12 @@ export const HeaderLogoMobile = styled.img`
 
 export const MenuBars = styled(FaBars)`
         display: none; 
-        @media screen and (max-width: 768px){
+        @media screen and (max-width: 1180px){
         display: block;
         color: #fff;
         height:40px;
         width: 40px;
         cursor: pointer;
-        position: absolute;
-        top: 0;
-        right: 0;
         transform: translate(-50%, 25%);
         }
 
